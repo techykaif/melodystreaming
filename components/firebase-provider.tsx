@@ -22,12 +22,12 @@ export default function FirebaseProvider({ children }: { children: ReactNode }) 
     try {
       // Initialize Firebase - in a real app, these would be environment variables
       const firebaseConfig = {
-        apiKey: "AIzaSyA4r1avTve-yVvn8qLFdpTHpKGNX9R7SJ4",
-  authDomain: "melody-stream-b77a5.firebaseapp.com",
-  projectId: "melody-stream-b77a5",
-  storageBucket: "melody-stream-b77a5.firebasestorage.app",
-  messagingSenderId: "199469545554",
-  appId: "1:199469545554:web:6decca2aa7ea7355c1478b",}
+        apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+        authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+        projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+        storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+        messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+        appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,}
 
       // Initialize Firebase
       const app = initializeApp(firebaseConfig)
