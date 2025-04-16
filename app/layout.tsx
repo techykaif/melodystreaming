@@ -17,7 +17,6 @@ export const metadata: Metadata = {
     { rel: "icon", url: "/favicon.ico" },
     { rel: "apple-touch-icon", url: "/icons/icon-192x192.png" },
   ],
-    generator: 'v0.dev'
 }
 
 export const viewport: Viewport = {
@@ -36,6 +35,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
        <link rel="manifest" href="/manifest.webmanifest" />
+       <link rel="icon" href="/icons/icon-192x192.png" />
        <meta name="theme-color" content="#18181b" />
       <body className={`${inter.className} overflow-x-hidden`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
